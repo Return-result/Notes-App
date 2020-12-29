@@ -2,7 +2,7 @@
 <resources>
     <style name="AppTheme" parent="Base.AppTheme">
         <item name="colorPrimaryDark">@android:color/white</item>
-        <item name="colorSecondary">@color/LightBlue500</item>
+        <item name="colorSecondary">@color/Scarlet</item>
 
         <item name="onSurfaceTranslucent">@color/BlackTranslucent</item>
         <item name="secondaryTranslucent">@color/LightBlue500Translucent</item>
