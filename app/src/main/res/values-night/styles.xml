@@ -2,7 +2,7 @@
 <resources>
     <style name="AppTheme" parent="Base.AppTheme">
         <item name="colorPrimaryDark">@color/LightBlueSurface</item>
-        <item name="colorSecondary">@color/LightBlue100</item>
+        <item name="colorSecondary">@color/LightRed100</item>
         <item name="colorSurface">@color/LightBlueSurface</item>
 
         <item name="onSurfaceTranslucent">@color/WhiteTranslucent</item>

@@ -58,39 +58,39 @@ class Settings : PreferenceFragmentCompat() {
             return@setOnPreferenceClickListener true
         }
 
-        githubPref?.setOnPreferenceClickListener {
-            openLink(Github)
-            return@setOnPreferenceClickListener true
-        }
+//        githubPref?.setOnPreferenceClickListener {
+//            openLink(Github)
+//            return@setOnPreferenceClickListener true
+//        }
 
         ratePref?.setOnPreferenceClickListener {
             openLink(PlayStore)
             return@setOnPreferenceClickListener true
         }
 
-        librariesPref?.setOnPreferenceClickListener {
-            val builder = MaterialAlertDialogBuilder(mContext)
-            builder.setTitle(R.string.libraries)
-            builder.setItems(R.array.libraries) { dialog, which ->
-                when (which) {
-                    0 -> openLink(PrettyTime)
-                    2 -> openLink(MaterialComponents)
-                }
-            }
-            builder.setNegativeButton(R.string.cancel, null)
-            builder.show()
-            return@setOnPreferenceClickListener true
-        }
+//        librariesPref?.setOnPreferenceClickListener {
+//            val builder = MaterialAlertDialogBuilder(mContext)
+//            builder.setTitle(R.string.libraries)
+//            builder.setItems(R.array.libraries) { dialog, which ->
+//                when (which) {
+//                    0 -> openLink(PrettyTime)
+//                    2 -> openLink(MaterialComponents)
+//                }
+//            }
+//            builder.setNegativeButton(R.string.cancel, null)
+//            builder.show()
+//            return@setOnPreferenceClickListener true
+//        }
 
-        maxItemsPref?.setOnPreferenceChangeListener { preference, newValue ->
+        maxItemsPref?.setOnPreferenceChangeListener { _, newValue ->
             return@setOnPreferenceChangeListener newValue.toString().isNotEmpty()
         }
 
-        maxLinesPref?.setOnPreferenceChangeListener { preference, newValue ->
+        maxLinesPref?.setOnPreferenceChangeListener { _, newValue ->
             return@setOnPreferenceChangeListener newValue.toString().isNotEmpty()
         }
 
-        themePreference?.setOnPreferenceChangeListener { preference, newValue ->
+        themePreference?.setOnPreferenceChangeListener { _, newValue ->
             when (newValue) {
                 getString(R.string.darkKey) -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 getString(R.string.lightKey) -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)

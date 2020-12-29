@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="Scarlet">#FF2400</color>
-    <color name="LightBlue100">#B3E5fC</color>
+    <color name="LightRed100">#FF2400</color>
     <color name="LightBlueSurface">#11181B</color>
 
     <color name="LightBlue500Translucent">#1A03A9F4</color>
