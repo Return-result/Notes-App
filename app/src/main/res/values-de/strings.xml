@@ -55,7 +55,7 @@
 
     <!-- Miscellaneous -->
     <string name="saved_to_device">Auf dem Gerät gespeichert</string>
-    <string name="saved_to_notally">In Notally gespeichert</string>
+    <string name="saved_to_notes">In Note gespeichert</string>
     <string name="empty_note">Leere Notiz</string>
     <string name="empty_list">Leere Liste</string>
     <string name="discarded_empty_note">Verworfene leere notiz</string>

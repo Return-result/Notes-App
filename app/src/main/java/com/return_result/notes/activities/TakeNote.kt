@@ -21,7 +21,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.return_result.notes.NotallyLinkMovementMethod
+import com.return_result.notes.NotesLinkMovementMethod
 import com.return_result.notes.R
 import com.return_result.notes.databinding.ActivityTakeNoteBinding
 import com.return_result.notes.miscellaneous.getLocale
@@ -29,7 +29,7 @@ import com.return_result.notes.miscellaneous.setOnNextAction
 import com.return_result.notes.viewmodels.TakeNoteModel
 import java.text.SimpleDateFormat
 
-class TakeNote : NotallyActivity() {
+class TakeNote : NotesActivity() {
 
     private lateinit var binding: ActivityTakeNoteBinding
     override val model: TakeNoteModel by viewModels()
@@ -67,7 +67,7 @@ class TakeNote : NotallyActivity() {
         body?.let { model.body = Editable.Factory.getInstance().newEditable(it) }
         title?.let { model.title = it }
 
-        Toast.makeText(this, R.string.saved_to_notally, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, R.string.saved_to_notes, Toast.LENGTH_SHORT).show()
     }
 
 
@@ -160,7 +160,7 @@ class TakeNote : NotallyActivity() {
     }
 
     private fun setupMovementMethod() {
-        val movementMethod = NotallyLinkMovementMethod {
+        val movementMethod = NotesLinkMovementMethod {
             MaterialAlertDialogBuilder(this)
                 .setItems(R.array.linkOptions) { _, which ->
                     if (which == 0) {

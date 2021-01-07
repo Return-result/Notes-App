@@ -55,7 +55,7 @@
 
     <!-- Miscellaneous -->
     <string name="saved_to_device">Збережено на пристрій</string>
-    <string name="saved_to_notally">Збережено в Notally</string>
+    <string name="saved_to_notes">Збережено в Notes</string>
     <string name="empty_note">Пустий запис</string>
     <string name="empty_list">Пустий список</string>
     <string name="discarded_empty_note">Відхилено порожній запис</string>

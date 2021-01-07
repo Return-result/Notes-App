@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 
-class NotallyApplication : Application() {
+class NotesApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()

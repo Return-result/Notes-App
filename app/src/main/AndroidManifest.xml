@@ -5,7 +5,7 @@
     android:installLocation="auto">
 
     <application
-        android:name="com.return_result.notes.NotallyApplication"
+        android:name="com.return_result.notes.NotesApplication"
         android:icon="@mipmap/note"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/note_round"

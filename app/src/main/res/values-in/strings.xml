@@ -55,7 +55,7 @@
 
     <!-- Miscellaneous -->
     <string name="saved_to_device">Disimpan ke perangkat</string>
-    <string name="saved_to_notally">Disimpan ke Notally</string>
+    <string name="saved_to_notes">Disimpan ke Notes</string>
     <string name="empty_note">Catatan kosong</string>
     <string name="empty_list">Daftar kosong</string>
     <string name="discarded_empty_note">Catatan kosong dibuang</string>

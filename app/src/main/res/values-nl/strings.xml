@@ -54,7 +54,7 @@
 
     <!-- Miscellaneous -->
     <string name="saved_to_device">Opgeslagen op apparaat</string>
-    <string name="saved_to_notally">Opgeslagen in Notally</string>
+    <string name="saved_to_notes">Opgeslagen in Notes</string>
     <string name="empty_note">Lege notitie</string>
     <string name="empty_list">Lege lijst</string>
     <string name="discarded_empty_note">weggegooid Lege notitie</string>

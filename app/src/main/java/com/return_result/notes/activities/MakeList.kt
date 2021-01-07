@@ -21,7 +21,7 @@ import com.return_result.notes.xml.ListItem
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MakeList : NotallyActivity() {
+class MakeList : NotesActivity() {
 
     private lateinit var adapter: MakeListAdapter
     private lateinit var binding: ActivityMakeListBinding

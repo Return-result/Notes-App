@@ -48,7 +48,7 @@
                 android:layout_height="1dp"
                 android:background="?android:attr/listDivider" />
 
-            <com.return_result.notes.NotallyEditText
+            <com.return_result.notes.NotesEditText
                 android:id="@+id/EnterBody"
                 style="@style/EditText.Body"
                 android:layout_width="match_parent"

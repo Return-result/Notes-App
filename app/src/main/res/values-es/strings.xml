@@ -55,7 +55,7 @@
 
     <!-- Miscellaneous -->
     <string name="saved_to_device">Guardadas a dispositivo</string>
-    <string name="saved_to_notally">Guardadas a Notally</string>
+    <string name="saved_to_notes">Guardadas a Notes</string>
     <string name="empty_note">Vaciar nota</string>
     <string name="empty_list">Vaciar lista</string>
     <string name="discarded_empty_note">Nota vacía descartada</string>

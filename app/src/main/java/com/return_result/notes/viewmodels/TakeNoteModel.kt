@@ -15,7 +15,7 @@ import com.return_result.notes.xml.SpanRepresentation
 import java.util.*
 import kotlin.collections.HashSet
 
-class TakeNoteModel(app: Application) : NotallyModel(app) {
+class TakeNoteModel(app: Application) : NotesModel(app) {
 
     var body = Editable.Factory.getInstance().newEditable(String())
 

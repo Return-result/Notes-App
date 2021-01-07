@@ -9,7 +9,7 @@ import androidx.core.text.HtmlCompat
 import androidx.core.text.toHtml
 import androidx.fragment.app.Fragment
 import com.return_result.notes.R
-import com.return_result.notes.activities.NotallyActivity
+import com.return_result.notes.activities.NotesActivity
 import com.return_result.notes.miscellaneous.Constants
 import com.return_result.notes.miscellaneous.Operation
 import com.return_result.notes.miscellaneous.applySpans
@@ -205,7 +205,7 @@ class ExportHelper(private val context: Context, private val fragment: Fragment)
     }
 
     private fun getHTML(baseNote: BaseNote) = buildString {
-        val formatter = SimpleDateFormat(NotallyActivity.DateFormat, context.getLocale())
+        val formatter = SimpleDateFormat(NotesActivity.DateFormat, context.getLocale())
         val date = formatter.format(baseNote.timestamp.toLong())
 
         append("<html><head><meta charset=\"UTF-8\" /></head><body>")
@@ -232,7 +232,7 @@ class ExportHelper(private val context: Context, private val fragment: Fragment)
     }
 
     private fun getPlainText(baseNote: BaseNote) = buildString {
-        val formatter = SimpleDateFormat(NotallyActivity.DateFormat, context.getLocale())
+        val formatter = SimpleDateFormat(NotesActivity.DateFormat, context.getLocale())
         val date = formatter.format(baseNote.timestamp.toLong())
 
         val body = when (baseNote) {
