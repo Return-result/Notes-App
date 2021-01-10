@@ -55,7 +55,7 @@
 
     <!-- Miscellaneous -->
     <string name="saved_to_device">Lagre til enhet</string>
-    <string name="saved_to_notally">Lagre til Notally</string>
+    <string name="saved_to_notes">Lagre til Notes</string>
     <string name="empty_note">Tomt notat</string>
     <string name="empty_list">Tom liste</string>
     <string name="discarded_empty_note">Forkastet tomt notat</string>

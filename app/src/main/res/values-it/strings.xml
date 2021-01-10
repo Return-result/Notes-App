@@ -55,7 +55,7 @@
 
     <!-- Miscellaneous -->
     <string name="saved_to_device">Salvata sul dispositivo</string>
-    <string name="saved_to_notally">Salvata su Notally</string>
+    <string name="saved_to_notes">Salvata su Notes</string>
     <string name="empty_note">Nota vuota</string>
     <string name="empty_list">Lista vuota</string>
     <string name="discarded_empty_note">Nota vuota non salvata</string>

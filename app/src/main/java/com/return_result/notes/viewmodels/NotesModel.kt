@@ -8,7 +8,7 @@ import java.io.File
 import java.util.*
 import kotlin.collections.HashSet
 
-abstract class NotallyModel(private val app: Application) : AndroidViewModel(app) {
+abstract class NotesModel(private val app: Application) : AndroidViewModel(app) {
 
     var isNewNote = true
     var isFirstInstance = true

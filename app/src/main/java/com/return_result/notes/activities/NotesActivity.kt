@@ -11,14 +11,14 @@ import com.return_result.notes.R
 import com.return_result.notes.helpers.OperationsHelper
 import com.return_result.notes.miscellaneous.Constants
 import com.return_result.notes.viewmodels.BaseNoteModel
-import com.return_result.notes.viewmodels.NotallyModel
+import com.return_result.notes.viewmodels.NotesModel
 import java.io.File
 import java.util.*
 import kotlin.collections.HashSet
 
-abstract class NotallyActivity : AppCompatActivity() {
+abstract class NotesActivity : AppCompatActivity() {
 
-    internal abstract val model: NotallyModel
+    internal abstract val model: NotesModel
     internal lateinit var operationsHelper: OperationsHelper
 
     override fun onBackPressed() {

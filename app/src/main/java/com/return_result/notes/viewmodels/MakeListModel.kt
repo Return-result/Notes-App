@@ -5,7 +5,7 @@ import com.return_result.notes.xml.BaseNote
 import com.return_result.notes.xml.List
 import com.return_result.notes.xml.ListItem
 
-class MakeListModel(app: Application) : NotallyModel(app) {
+class MakeListModel(app: Application) : NotesModel(app) {
 
     val items = ArrayList<ListItem>()
 

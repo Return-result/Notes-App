@@ -55,7 +55,7 @@
 
     <!-- Miscellaneous -->
     <string name="saved_to_device">Zapisano w urządzeniu</string>
-    <string name="saved_to_notally">Zapisano w Notally</string>
+    <string name="saved_to_notes">Zapisano w Notes</string>
     <string name="empty_note">Pusta notatka</string>
     <string name="empty_list">Pusta lista</string>
     <string name="discarded_empty_note">Usunięto pustą notatkę</string>

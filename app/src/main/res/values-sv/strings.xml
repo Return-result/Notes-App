@@ -55,7 +55,7 @@
 
     <!-- Miscellaneous -->
     <string name="saved_to_device">Sparad till enhet</string>
-    <string name="saved_to_notally">Sparad till Notally</string>
+    <string name="saved_to_notes">Sparad till Notes</string>
     <string name="empty_note">Tom anteckning</string>
     <string name="empty_list">Tom lista</string>
     <string name="discarded_empty_note">Kasserad tom anteckning</string>
