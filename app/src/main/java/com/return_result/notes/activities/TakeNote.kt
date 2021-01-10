@@ -19,6 +19,10 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.return_result.notes.NotallyLinkMovementMethod
@@ -34,6 +38,8 @@ class TakeNote : NotallyActivity() {
     private lateinit var binding: ActivityTakeNoteBinding
     override val model: TakeNoteModel by viewModels()
 
+    lateinit var mAdView : AdView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTakeNoteBinding.inflate(layoutInflater)
@@ -42,6 +48,19 @@ class TakeNote : NotallyActivity() {
         binding.EnterTitle.setOnNextAction {
             binding.EnterBody.requestFocus()
         }
+
+//        val adView = AdView(this)
+//
+//        adView.adSize = AdSize.BANNER
+//
+//        adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+// TODO: Add adView to your view hierarchy.
+
+        MobileAds.initialize(this) {}
+
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         setupEditor()
         setupListeners()
