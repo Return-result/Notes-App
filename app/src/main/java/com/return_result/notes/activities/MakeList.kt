@@ -8,6 +8,9 @@ import androidx.activity.viewModels
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.button.MaterialButton
 import com.return_result.notes.R
 import com.return_result.notes.databinding.ActivityMakeListBinding
@@ -27,6 +30,8 @@ class MakeList : NotesActivity() {
     private lateinit var binding: ActivityMakeListBinding
     override val model: MakeListModel by viewModels()
 
+    lateinit var mAdViewMakeList : AdView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMakeListBinding.inflate(layoutInflater)
@@ -39,6 +44,13 @@ class MakeList : NotesActivity() {
         setupListeners()
         setupRecyclerView()
         setupToolbar(binding.Toolbar)
+
+
+        MobileAds.initialize(this) {}
+
+        mAdViewMakeList = findViewById(R.id.adViewMakeList)
+        val adRequest = AdRequest.Builder().build()
+        mAdViewMakeList.loadAd(adRequest)
 
         if (model.isNewNote) {
             binding.EnterTitle.requestFocus()

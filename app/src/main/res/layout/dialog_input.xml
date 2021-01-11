@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:digits="123456789"
+            android:fontFamily="@font/cabin"
             android:inputType="number"
             android:maxLength="1"
             android:theme="@style/TextInputEditText" />

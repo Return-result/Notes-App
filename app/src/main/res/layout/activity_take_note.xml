@@ -35,13 +35,16 @@
                 android:id="@+id/EnterTitle"
                 style="@style/EditText.Title"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/DateCreated"
                 style="@style/DateCreated"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin"
+                app:fontFamily="@font/cabin" />
 
             <View
                 android:layout_width="match_parent"
@@ -53,7 +56,8 @@
                 style="@style/EditText.Body"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusableInTouchMode="true" />
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/cabin" />
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/LabelGroup"
@@ -62,13 +66,18 @@
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"></LinearLayout>
+
             <com.google.android.gms.ads.AdView
                 xmlns:ads="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/adView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:layout_marginTop="300dp"
                 ads:adSize="BANNER"
                 ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
             </com.google.android.gms.ads.AdView>
@@ -78,5 +87,7 @@
 
 
     </androidx.core.widget.NestedScrollView>
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
