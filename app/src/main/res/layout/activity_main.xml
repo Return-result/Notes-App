@@ -47,7 +47,7 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <fragment
+        <androidx.fragment.app.FragmentContainerView
             android:id="@+id/NavigationHost"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
@@ -65,7 +65,8 @@
             android:layout_marginBottom="16dp"
             app:rippleColor="@color/FABRipple"
             app:srcCompat="@drawable/add"
-            app:tint="?attr/colorSurface" />
+            app:tint="?attr/colorSurface"
+            android:contentDescription="@string/notes" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

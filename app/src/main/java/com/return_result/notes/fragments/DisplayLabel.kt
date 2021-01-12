@@ -7,7 +7,7 @@ import com.return_result.notes.miscellaneous.Constants
 import com.return_result.notes.miscellaneous.Operation
 import com.return_result.notes.xml.BaseNote
 
-class DisplayLabel : NotallyFragment() {
+class DisplayLabel : NoteFragment() {
 
     override fun getObservable(): MutableLiveData<ArrayList<BaseNote>>? {
         val label = arguments?.getString(Constants.argLabelKey)!!

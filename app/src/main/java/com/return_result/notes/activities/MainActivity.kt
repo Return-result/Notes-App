@@ -12,6 +12,10 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.InterstitialAd
+import com.google.android.gms.ads.MobileAds
 import com.return_result.notes.R
 import com.return_result.notes.databinding.ActivityMainBinding
 import com.return_result.notes.miscellaneous.Constants
@@ -21,6 +25,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
+
+    private lateinit var mInterstitialAd: InterstitialAd
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
@@ -33,6 +39,12 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.Toolbar)
         setupNavigation()
+
+        MobileAds.initialize(this)
+
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
     }
 
     private fun setupNavigation() {
@@ -79,8 +91,8 @@ class MainActivity : AppCompatActivity() {
     private fun handleDestinationChange(destination: NavDestination, arguments: Bundle?) {
         when (destination.id) {
             R.id.NotesFragment -> {
-                binding.TakeNoteFAB.show()
-                binding.EnterSearchKeyword.visibility = View.GONE
+                    binding.TakeNoteFAB.show()
+                    binding.EnterSearchKeyword.visibility = View.GONE
             }
             R.id.SearchFragment -> {
                 binding.TakeNoteFAB.hide()
@@ -88,13 +100,34 @@ class MainActivity : AppCompatActivity() {
                 binding.EnterSearchKeyword.visibility = View.VISIBLE
             }
             R.id.DisplayLabelFragment -> {
-                binding.TakeNoteFAB.hide()
-                binding.EnterSearchKeyword.visibility = View.GONE
-                supportActionBar?.setTitle(arguments?.getString(Constants.argLabelKey))
+                if (mInterstitialAd.isLoaded) {
+                    mInterstitialAd.show()
+                    mInterstitialAd.adListener = object: AdListener() {
+                        override fun onAdClosed() {
+                            binding.TakeNoteFAB.hide()
+                            binding.EnterSearchKeyword.visibility = View.GONE
+                            supportActionBar?.setTitle(arguments?.getString(Constants.argLabelKey))
+                        }
+                    }
+                } else {
+                    binding.TakeNoteFAB.hide()
+                    binding.EnterSearchKeyword.visibility = View.GONE
+                    supportActionBar?.setTitle(arguments?.getString(Constants.argLabelKey))
+                }
             }
             else -> {
-                binding.TakeNoteFAB.hide()
-                binding.EnterSearchKeyword.visibility = View.GONE
+                if (mInterstitialAd.isLoaded) {
+                    mInterstitialAd.show()
+                    mInterstitialAd.adListener = object: AdListener() {
+                        override fun onAdClosed() {
+                            binding.TakeNoteFAB.hide()
+                            binding.EnterSearchKeyword.visibility = View.GONE
+                        }
+                    }
+                } else {
+                    binding.TakeNoteFAB.hide()
+                    binding.EnterSearchKeyword.visibility = View.GONE
+                }
             }
         }
     }

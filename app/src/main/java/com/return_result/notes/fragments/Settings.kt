@@ -10,7 +10,6 @@ import androidx.preference.EditTextPreference
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.return_result.notes.R
 import com.return_result.notes.helpers.ExportHelper
 import com.return_result.notes.miscellaneous.Constants
@@ -40,8 +39,8 @@ class Settings : PreferenceFragmentCompat() {
         val importNotesPref: Preference? = findPreference(mContext.getString(R.string.importNotesFromAFileKey))
 
         val ratePref: Preference? = findPreference(mContext.getString(R.string.rateKey))
-        val githubPref: Preference? = findPreference(mContext.getString(R.string.githubKey))
-        val librariesPref: Preference? = findPreference(mContext.getString(R.string.librariesKey))
+//        val githubPref: Preference? = findPreference(mContext.getString(R.string.githubKey))
+//        val librariesPref: Preference? = findPreference(mContext.getString(R.string.librariesKey))
 
         exportNotesPref?.setOnPreferenceClickListener {
             exportHelper.exportBackup()
@@ -123,9 +122,9 @@ class Settings : PreferenceFragmentCompat() {
     }
 
     companion object {
-        private const val Github = "https://github.com/OmGodse/Notally"
+//        private const val Github = "https://github.com/OmGodse/Notally"
         private const val PlayStore = "https://play.google.com/store/apps/details?id=com.omgodse.notally"
-        private const val PrettyTime = "https://github.com/ocpsoft/prettytime"
-        private const val MaterialComponents = "https://github.com/material-components/material-components-android"
+//        private const val PrettyTime = "https://github.com/ocpsoft/prettytime"
+//        private const val MaterialComponents = "https://github.com/material-components/material-components-android"
     }
 }

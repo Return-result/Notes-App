@@ -34,7 +34,7 @@ import com.return_result.notes.xml.List
 import com.return_result.notes.xml.Note
 import java.io.File
 
-abstract class NotallyFragment : Fragment() {
+abstract class NoteFragment : Fragment() {
 
     internal lateinit var mContext: Context
     private lateinit var exportHelper: ExportHelper

@@ -5,7 +5,7 @@ import com.return_result.notes.helpers.OperationsHelper
 import com.return_result.notes.miscellaneous.Operation
 import com.return_result.notes.xml.BaseNote
 
-class Deleted : NotallyFragment() {
+class Deleted : NoteFragment() {
 
     override fun getObservable() = model.deletedNotes
 

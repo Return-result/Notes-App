@@ -15,7 +15,7 @@ import com.return_result.notes.helpers.OperationsHelper
 import com.return_result.notes.miscellaneous.Operation
 import com.return_result.notes.xml.BaseNote
 
-class Notes : NotallyFragment() {
+class Notes : NoteFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -11,7 +11,7 @@ import com.return_result.notes.helpers.OperationsHelper
 import com.return_result.notes.miscellaneous.Operation
 import com.return_result.notes.xml.BaseNote
 
-class Search : NotallyFragment() {
+class Search : NoteFragment() {
 
     private var textWatcher: TextWatcher? = null
 

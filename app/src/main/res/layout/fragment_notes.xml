@@ -11,7 +11,8 @@
         android:layout_height="96dp"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
-        app:tint="?attr/colorSecondary" />
+        app:tint="?attr/colorSecondary"
+        android:contentDescription="@string/notes" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerView"
