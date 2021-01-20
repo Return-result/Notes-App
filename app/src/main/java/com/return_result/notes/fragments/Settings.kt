@@ -38,7 +38,7 @@ class Settings : PreferenceFragmentCompat() {
         val exportNotesPref: Preference? = findPreference(mContext.getString(R.string.exportNotesToAFileKey))
         val importNotesPref: Preference? = findPreference(mContext.getString(R.string.importNotesFromAFileKey))
 
-        val ratePref: Preference? = findPreference(mContext.getString(R.string.rateKey))
+//        val ratePref: Preference? = findPreference(mContext.getString(R.string.rateKey))
 //        val githubPref: Preference? = findPreference(mContext.getString(R.string.githubKey))
 //        val librariesPref: Preference? = findPreference(mContext.getString(R.string.librariesKey))
 
