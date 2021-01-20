@@ -62,10 +62,10 @@ class Settings : PreferenceFragmentCompat() {
 //            return@setOnPreferenceClickListener true
 //        }
 
-        ratePref?.setOnPreferenceClickListener {
-            openLink(PlayStore)
-            return@setOnPreferenceClickListener true
-        }
+//        ratePref?.setOnPreferenceClickListener {
+//            openLink(PlayStore)
+//            return@setOnPreferenceClickListener true
+//        }
 
 //        librariesPref?.setOnPreferenceClickListener {
 //            val builder = MaterialAlertDialogBuilder(mContext)
@@ -123,7 +123,7 @@ class Settings : PreferenceFragmentCompat() {
 
     companion object {
 //        private const val Github = "https://github.com/OmGodse/Notally"
-        private const val PlayStore = "https://play.google.com/store/apps/details?id=com.omgodse.notally"
+//        private const val PlayStore = "https://play.google.com/store/apps/details?id=com.omgodse.notally"
 //        private const val PrettyTime = "https://github.com/ocpsoft/prettytime"
 //        private const val MaterialComponents = "https://github.com/material-components/material-components-android"
     }

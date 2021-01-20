@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         MobileAds.initialize(this)
 
         mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
+        mInterstitialAd.adUnitId = "ca-app-pub-6120599717351425/2990977309"
         mInterstitialAd.loadAd(AdRequest.Builder().build())
     }
 
